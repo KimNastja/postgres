@@ -23,7 +23,7 @@ select full_name from Author where date_death > '2077-10-23';
 ```sh
 SELECT full_name, date_birth, date_death, homeland
 FROM Author 
-INNER JOIN Book ON Author.id = author_id
+INNER JOIN Book ON Author.id = Book.author_id
 INNER JOIN Edition ON Edition.book_id = Book.id
 where Edition.date_published > Author.date_death;
 ```
